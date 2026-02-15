@@ -44,13 +44,6 @@ Converts COCO format annotations to binary segmentation masks with proper Robofl
 - **Values**: 0 (background), 255 (segmented region)
 - **Format**: Single-channel PNG
 
-### Run Order
-Execute cells sequentially:
-1. Cell 2: Install dependencies
-2. Cell 4: Define mask generation function
-3. Cell 5: Generate masks for both datasets
-4. Cell 7: Merge into `final_dataset/`
-
 ##  2. Model Training (`text_conditioned_segmentation_final.ipynb`)
 
 ### Architecture
@@ -91,17 +84,6 @@ Device: CUDA (if available)
 **Overfitting Gap**: 0.0726 (7.3%)
 
  Model shows mild overfitting (train loss lower than validation loss)
-
-### Run Order
-Execute cells sequentially:
-1. Cells 2-10: Define classes and load dataset
-2. Cell 11: Visualize sample (verify masks are correct)
-3. Cell 14: Create dataloaders
-4. Cell 16: Initialize model
-5. Cell 18: Define training functions
-6. Cell 20: **Run training** (20 epochs, ~1-2 hours on GPU)
-7. Cell 22: Plot training curves
-8. Cell 26: Test predictions on validation set
 
 ### Positional Encoding Experiment
 
